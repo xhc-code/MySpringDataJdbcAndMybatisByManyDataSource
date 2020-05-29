@@ -1,7 +1,5 @@
 package org.example.utils;
 
-import org.springframework.aop.target.ThreadLocalTargetSource;
-
 public class ContextSwitchDataSourceUtils {
 
     private final static ThreadLocal<DataSourceEnum> Local_DATA_SOURCE = new ThreadLocal<>();

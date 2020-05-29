@@ -1,7 +1,6 @@
 package org.example;
 
 import org.example.domain.Student;
-import org.example.mapper.StudentMapper;
 import org.example.service.StudentService;
 import org.example.utils.DataUtil;
 import org.springframework.boot.CommandLineRunner;

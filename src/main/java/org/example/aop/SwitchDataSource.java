@@ -11,7 +11,6 @@ import org.example.annon.TargetDataSource;
 import org.example.utils.ContextSwitchDataSourceUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.aop.framework.AopContext;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;

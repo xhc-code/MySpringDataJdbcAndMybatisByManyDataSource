@@ -5,7 +5,6 @@ import org.example.domain.Student;
 import org.example.mapper.StudentMapper;
 import org.example.service.StudentService;
 import org.example.utils.ContextSwitchDataSourceUtils;
-import org.example.utils.DataUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
