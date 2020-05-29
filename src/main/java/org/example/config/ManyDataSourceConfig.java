@@ -2,6 +2,7 @@ package org.example.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.example.utils.ContextSwitchDataSourceUtils;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
@@ -23,8 +24,8 @@ public class ManyDataSourceConfig {
     public DynamicDataSource dynamicDataSouces(@Qualifier("db1") HikariDataSource dataSource, @Qualifier("db2") HikariDataSource dataSource2){
         DynamicDataSource dynamicDataSource = new DynamicDataSource();
         HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
-        objectObjectHashMap.put("db1",dataSource);
-        objectObjectHashMap.put("db2",dataSource2);
+        objectObjectHashMap.put(ContextSwitchDataSourceUtils.DataSourceEnum.ONE.getDataSourceKey(),dataSource);
+        objectObjectHashMap.put(ContextSwitchDataSourceUtils.DataSourceEnum.TWO.getDataSourceKey(),dataSource2);
         dynamicDataSource.setTargetDataSources(objectObjectHashMap);
         dynamicDataSource.setDefaultTargetDataSource(dataSource);
         return dynamicDataSource;

@@ -8,13 +8,14 @@ spring:
     two:
       username: root
       password: root
-      url: jdbc:mariadb://localhost:3306/myschool
+      jdbc-url: jdbc:mariadb://localhost:3306/myschool
       driver-class-name: org.mariadb.jdbc.Driver
-
-
 
 
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: org.example.domain
-
+logging:
+  level:
+    org.example: debug
+    org.springframework: debug

@@ -20,4 +20,19 @@ public class ApplicationTest
         Number key = new GeneratedKeyHolder().getKey();
         System.out.println(key);
     }
+
+    @Test
+    public void test1(){
+
+
+        System.out.println(A.AA == A.AA);
+        System.out.println(A.AA == A.AA);
+    }
+
+
+
+}
+
+enum A{
+    AA,BB
 }
