@@ -9,5 +9,6 @@ import java.util.Optional;
 public interface StudentService {
 
     Optional<Student> findById(String id);
-    public void test();
+    void test();
+    void save();
 }

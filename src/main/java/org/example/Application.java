@@ -32,7 +32,7 @@ public class Application {
         SpringApplication.run(Application.class,args);
     }
 
-    @Bean
+//    @Bean
     public CommandLineRunner test1(ApplicationContext cxt, StudentService studentService){
         return args -> {
 
@@ -41,6 +41,14 @@ public class Application {
             System.err.println("=================================");
             studentService.test();
 
+        };
+    }
+    @Bean
+    public CommandLineRunner testTranslate(ApplicationContext cxt, StudentService studentService){
+        return args -> {
+            System.err.println("=================================");
+            studentService.save();
+            System.err.println("=================================");
         };
     }
 
